@@ -32,6 +32,12 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>qqq", ":wqa<CR>")
 vim.keymap.set("n", "<leader>wq", ":w | bd<CR>")
 
+-- Normal mode: copy the current line to the system clipboard
+vim.keymap.set("n", "<leader>y", '"+yy')
+
+-- Visual mode: copy the selected text to the system clipboard
+vim.keymap.set("v", "<leader>y", '"+y')
+
 require("lazy").setup("plugins")
 require("lazy").setup({
 	checker = { enabled = false },
